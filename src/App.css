@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -16,17 +15,17 @@
 }
 
 header {
-    background: linear-gradient(
-    hsla(var(--Light-slate-blue-background)),
-    hsla(var(--Light-royal-blue-background))
+  background: linear-gradient(
+  hsla(var(--Light-slate-blue-background)),
+  hsla(var(--Light-royal-blue-background))
   );
   padding: 20px 45px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 1.875rem;
+  border-bottom-right-radius: 1.875rem;
 }
 
 .paragraph-result {
-  color: hsla(var(--Pale-blue), 0.74);
+  color: hsla(var(--Pale-blue), 0.84);
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -36,11 +35,13 @@ header {
   border-radius: 50%;
   border: none;
   padding-inline: 2.5rem;
-  background-color: hsla(var(--Violet-blue-circle), 0.4);
+  background: linear-gradient(
+  hsla(var(--Violet-blue-circle)), hsla(var(--Persian-blue-circle)));
   color: hsla(var(--Pale-blue), 0.54);
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 }
+
 
 .percent-result {
   color: hsla(var(--White));
@@ -64,15 +65,17 @@ h1 {
 /*summary*/
 
 main {
-  align-self: flex-start;
+  width: 100%;
   padding: 20px 19px;
   background-color: hsla(var(--White));
 }
 
 .summrary-paragraph {
+  font-size: 19px;
   font-weight: 800;
   color: hsla(var(--Dark-gray-blue));
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .summary-list {
@@ -89,7 +92,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .label {
@@ -102,20 +105,142 @@ main {
   display: inline-block;
 }
 
+.score  {
+  color: hsla(var(--Dark-gray-blue), 0.6);
+  font-weight: 800;
+}
+
+.real-score {
+  color: hsla(var(--Dark-gray-blue), 1);
+}
+
 .summary-card-reaction {
-  background-color: hsla(var(--Orangey-yellow));
+  background-color: hsla(var(--Light-red), 0.070);
+}
+
+.reaction {
+  color: hsla(var(--Light-red));
+  font-weight: 600;
+}
+
+.summary-card-memory {
+  background-color: hsla(var(--Orangey-yellow), 0.070);
+}
+
+.memory {
+  color: hsla(var(--Orangey-yellow));
+  font-weight: 600;
+}
+
+.summary-card-verbal {
+  background-color: hsla(var(--Green-teal), 0.070);
+}
+
+.verbal {
+  color: hsla(var(--Green-teal));
+  font-weight: 600;
+}
+
+.summary-card-visual {
+  background-color: hsla(var(--Cobalt-blue), 0.070);
+}
+
+.visual {
+  color: hsla(var(--Cobalt-blue));
+  font-weight: 600;
+}
+
+.btn {
+  color: hsla(var(--Pale-blue));
+  background-color: hsla(var(--Dark-gray-blue));
+  border-radius: 1.875rem;
+  border: none;
+  padding: 0.875rem 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(
+  hsla(var(--Light-slate-blue-background)),
+  hsla(var(--Light-royal-blue-background))
+  );
+  
 }
 
 
+@media only screen and (min-width: 80rem) {
 
-.btn {
-  color: hsla(var(--White));
-  background-color: hsla(var(--Dark-gray-blue));
-  border-radius: 30px;
-  border: none;
-  padding: 14px 8rem;
-  margin-top: 1rem;
-  font-weight: 500;
+  body {
+    background-color: hsla(var(--Pale-blue));
+  }
+
+  .result-container {
+    max-width: 75rem;
+    display: grid;
+    grid-template-columns: 450px 400px;
+    grid-template-rows: 500px;
+    justify-content: center;
+    align-items: normal;
+    border-radius: 1.875rem;
+    background-color: hsla(var(--White));
+  }
+
+  header, main {
+    border-radius: 1.875rem;
+  }
+
+  .paragraph-result {
+    font-size: 22px;
+    margin-bottom: 2rem;
+  }
+
+  .score-cr {
+    width: 200px;
+    max-width: 100%;
+    font-size: 1.1rem
+  }
+
+  .percent-result {
+    font-size: 4.2rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 19px;
+  }
+
+  .paragraph-score {
+    font-size: 19px;
+    padding-inline: 45px;
+  }
+
+  main {
+    padding: 20px 32px;
+  }
+
+  .summrary-paragraph {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+  }
+
+  .summary-list {
+    gap: 1.3rem;
+  }
+
+  .summary-list li {
+     font-size: 18px;
+  }
+
+  .btn {
+    margin-top: 2rem;
+    font-size: 19px;
+  }
+  
+
 }
 
 

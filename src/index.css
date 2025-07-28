@@ -94,5 +94,8 @@ body {
   font-family: var(--ff-hanken);
   font-size: 1rem;
   margin-inline: auto;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
 }
 
